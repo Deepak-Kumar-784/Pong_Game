@@ -1,6 +1,6 @@
 # Pong Game (SFML)
 
-An energetic, modern take on the arcade classic. This project uses C++ and SFML to deliver a smooth paddle–ball experience with obstacles, score tracking, lives, and a tidy, production-style folder layout.
+A small, simple arcade-style paddle-and-ball game made with C++ and SFML. It includes basic obstacles, score and lives, and uses a clean, organized folder structure.
 
 **Highlights**
 
@@ -69,4 +69,4 @@ pong.exe
 - Built by Deepak Kumar Behera
 - Engine: [SFML](https://www.sfml-dev.org/)
 
-Enjoy hacking on it — contributions and experiments welcome!
+Play around with it however you like — happy to accept contributions and experiments!
