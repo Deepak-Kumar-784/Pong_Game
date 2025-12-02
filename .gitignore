@@ -1,3 +1,24 @@
+# Build outputs
+*.exe
+*.dll
+*.lib
+*.obj
+*.pdb
+*.ilk
+*.exp
+*.o
+*.a
+
+# CMake and build folders
+build/
+out/
+dist/
+
+# VS Code
+.vscode/*
+
+# Logs
+*.log
 *.exe
 temp.cpp
 *.vscode
