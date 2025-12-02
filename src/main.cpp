@@ -57,7 +57,7 @@ int main()
     bool gameOver = false, acceptInput = false;
 
     Font font;
-    font.loadFromFile("assets/fonts/KOMIKAP_.ttf");
+    font.loadFromFile("../assets/fonts/KOMIKAP_.ttf");
 
     Text hud, gameOverText, messageText, pauseText;
     hud.setFont(font);
@@ -92,7 +92,7 @@ int main()
     pauseText.setPosition(windowWidth / 2.0f, windowHeight / 2.0f);
 
     Texture bgTexture;
-    bgTexture.loadFromFile("assets/images/background.jpg");
+    bgTexture.loadFromFile("../assets/images/background.jpg");
     Sprite bgSprite(bgTexture);
     Vector2u texSize = bgTexture.getSize();
     bgSprite.setScale(float(windowWidth) / texSize.x, float(windowHeight) / texSize.y);
