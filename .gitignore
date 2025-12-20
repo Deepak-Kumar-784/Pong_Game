@@ -19,7 +19,3 @@ dist/
 
 # Logs
 *.log
-*.exe
-temp.cpp
-*.vscode
-tile.cpp
