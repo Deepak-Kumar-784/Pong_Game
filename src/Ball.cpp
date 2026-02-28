@@ -5,7 +5,7 @@ Ball::Ball(float radius, float startX, float startY)
 {
     ballShape.setRadius(radius);
     ballShape.setFillColor(sf::Color::White);
-    ballShape.setPosition(startX, startY);
+    ballShape.setPosition({startX, startY});
 }
 
 void Ball::start()
@@ -51,7 +51,7 @@ void Ball::reverseY()
 
 void Ball::reset(float startX, float startY)
 {
-    ballShape.setPosition(startX, startY);
+    ballShape.setPosition({startX, startY});
     isMoving = false;
 }
 

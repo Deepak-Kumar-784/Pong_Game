@@ -1,6 +1,8 @@
-# Pong Game (SFML)
+# Pong Game (SFML 3)
 
-A small, simple arcade-style paddle-and-ball game made with C++ and SFML. It includes basic obstacles, score and lives, and uses a clean, organized folder structure.
+A small, simple arcade-style paddle-and-ball game made with C++ and **SFML 3**. It includes basic obstacles, score and lives, and uses a clean, organized folder structure.
+
+> **Requires SFML 3.x** — this project is not compatible with SFML 2.x.
 
 **Highlights**
 
@@ -22,27 +24,27 @@ A small, simple arcade-style paddle-and-ball game made with C++ and SFML. It inc
 
 **Build Requirements**
 
-- C++ compiler (MSVC, MinGW, or Clang)
-- SFML (Graphics/Window/System)
+- C++ compiler with C++17 support (MSVC, MinGW, or Clang)
+- **SFML 3.x** (Graphics / Window / System modules)
 
-Install SFML via your preferred method (e.g., prebuilt binaries or vcpkg) and ensure library/include paths are configured.
+Install SFML 3 via your preferred method (e.g., prebuilt binaries from [sfml-dev.org](https://www.sfml-dev.org/) or vcpkg: `vcpkg install sfml`) and ensure library/include paths are configured.
 
 **Quick Build (MinGW on Windows)**
 
 ```
-g++ -I include -I <SFML-include> -L <SFML-lib> \
+g++ -std=c++17 -I include -I <SFML-include> -L <SFML-lib> \
 	src/main.cpp src/Bat.cpp src/Ball.cpp -o pong \
 	-lsfml-graphics -lsfml-window -lsfml-system
 
 ./pong
 ```
 
-Replace `<SFML-include>` and `<SFML-lib>` with your local SFML paths.
+Replace `<SFML-include>` and `<SFML-lib>` with your local SFML 3 paths.
 
 **Quick Build (MSVC Developer Command Prompt)**
 
 ```
-cl /I include /I <SFML-include> src\main.cpp src\Bat.cpp src\Ball.cpp \
+cl /std:c++17 /I include /I <SFML-include> src\main.cpp src\Bat.cpp src\Ball.cpp \
 	/link /LIBPATH:<SFML-lib> sfml-graphics.lib sfml-window.lib sfml-system.lib \
 	/out:pong.exe
 
@@ -63,6 +65,7 @@ pong.exe
 
 - The ball starts above the paddle; break tiles to score.
 - Collision logic distinguishes side vs. top/bottom hits for obstacles.
+- This project targets **SFML 3.x** and uses its updated API (`sf::Event` variant model, `Vector2f`-only setters, `sf::Font::openFromFile`, `findIntersection`, etc.). It will **not** compile against SFML 2.x.
 
 **Credits**
 
